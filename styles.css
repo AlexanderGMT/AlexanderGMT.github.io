@@ -82,6 +82,7 @@ header p {
     opacity: 0.7;
     border: 2px solid;
     animation: borderAnimation 4s linear infinite;
+    width: 45%;
 }
 
 @keyframes borderAnimationP {
@@ -188,9 +189,11 @@ footer {
     color: #fff;
     text-align: center;
     /*animation: colorTransition 7s linear infinite;*/
-    border-radius: 12px;
-    margin-top: 6%;
+    border-radius: 8px;
+    margin-top: 7%;
     margin-bottom: 3%;
+    border: 1px solid;
+    animation: borderAnimation 4s linear infinite;
 }
 
 /* Add your background image path @keyframes colorTransition {
@@ -332,6 +335,8 @@ footer {
 
 .skill-progress {
     background-color: #62B6B7;
+    animation: borderAnimation 4s linear infinite;
+    border: 2px solid;
     height: 100%;
     border-radius: 10px;
 }
