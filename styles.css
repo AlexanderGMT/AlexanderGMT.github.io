@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(to bottom, #081b29, #045F66 )
+    background: linear-gradient(to bottom right, #081b29, #63063f)
 }
 
 ::-webkit-scrollbar {
@@ -48,8 +48,15 @@ scrollbar-thumb:hover {
 
 .text-right {
     margin-left: 19%;
+    animation: slideInT 2s ease-out forwards;
+    margin-left: -100%;
 }
 
+@keyframes slideInT {
+    to {
+        margin-left: 19%; /* Final position on the screen */
+    }
+}
 
 header p {
     font-size: 18px;
@@ -73,6 +80,26 @@ header p {
     margin-right: 24%;
     border-radius: 8px;
     opacity: 0.7;
+    border: 2px solid;
+    animation: borderAnimation 4s linear infinite;
+}
+
+@keyframes borderAnimationP {
+    0% {
+        border-color: #fff;
+    }
+    25% {
+        border-color: #62B6B7;
+    }
+    50% {
+        border-color: #fff;
+    }
+    75% {
+        border-color: #62B6B7;
+    }
+    100% {
+        border-color: #fff;
+    }
 }
 
 
@@ -102,6 +129,7 @@ nav a {
     font-weight: bold;
     font-size: 18px;
     transition: opacity 0.5s ease-in-out;
+    
 }
 
 nav a:hover {
@@ -159,23 +187,23 @@ footer {
     justify-content: center;
     color: #fff;
     text-align: center;
-    animation: colorTransition 7s linear infinite;
+    /*animation: colorTransition 7s linear infinite;*/
     border-radius: 12px;
-    margin-top: 3%;
+    margin-top: 6%;
     margin-bottom: 3%;
 }
 
-@keyframes colorTransition {
+/* Add your background image path @keyframes colorTransition {
     0% {
         opacity: 0.5;
     }
-    50% {
+    70% {
         opacity: 1;
     }
     100% {
         opacity: 0.5;
     }    
-}
+}*/
 
 
 
@@ -194,7 +222,7 @@ footer {
     font-size: 16px;
     background-color: #081b29;
     color: #fff;
-    border: 2px solid transparent;
+    border: 1px solid;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
@@ -204,6 +232,32 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: slideInP 3s ease-out forwards, borderAnimation 4s linear infinite;
+    margin-left: -100%;
+}
+
+@keyframes slideInP {
+    to {
+        margin-left: 9.8%; /* Final position on the screen */
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #fff;
+    }
+    25% {
+        border-color: #b73b87;
+    }
+    50% {
+        border-color: #fff;
+    }
+    75% {
+        border-color: #b73b87;
+    }
+    100% {
+        border-color: #fff;
+    }
 }
 
 .btn:hover {
@@ -218,16 +272,23 @@ footer {
     font-size: 16px;
     background-color: #081b29;
     color: #fff;
-    border: 2px solid transparent;
+    border: 1px solid;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    margin-left: 18.8%;
+    margin-left: -100%;
     background-image: url('images/parallax3.jpg'); /* Add your background image path */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: slideIn 2s ease-out forwards, borderAnimation 4s linear infinite;
+}
+
+@keyframes slideIn {
+    to {
+        margin-left: 10%; /* Final position on the screen */
+    }
 }
 
 .btn-hire:hover {
@@ -278,4 +339,8 @@ footer {
 .Porject-text {
     margin-top: 5%;
     margin-bottom: 5%;
+}
+
+.hire-container {
+    margin-top: -3.5%;
 }
