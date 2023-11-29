@@ -11,20 +11,21 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(to bottom right, #081b29, #63063f)
+    background: linear-gradient(to bottom right, #081b29, #63063f);
 }
 
+
 ::-webkit-scrollbar {
-    width: 16px; /* Set the width of the scroll bar */
+    width: 16px; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #045F66; /* Set the color of the scroll bar thumb */
-    border-radius: 6px; /* Optional: Add rounded corners to the scroll bar thumb */
+    background-color: #045F66; 
+    border-radius: 6px; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #62B6B7; /* Change color on hover if desired */
+    background-color: #62B6B7; 
 }
 
 scrollbar-thumb:hover {
@@ -70,13 +71,13 @@ header p {
 
 .image-container {
     display: flex;
-    justify-content: flex-end; /* Align image to the right within its container */
-    align-items: center; /* Center the image vertically within its container */
+    justify-content: flex-end; 
+    align-items: center; 
 }
 
 .profile-pic {
-    max-width: 60%; /* Ensure the image doesn't exceed its container */
-    height: auto; /* Maintain the image's aspect ratio */
+    max-width: 60%; 
+    height: auto; 
     margin-right: 24%;
     border-radius: 8px;
     opacity: 0.7;
@@ -139,7 +140,7 @@ nav a:hover {
 
 
 
-/* Add media query to make navigation responsive */
+
 @media only screen and (max-width: 600px) {
     nav ul {
         flex-direction: column;
@@ -159,11 +160,15 @@ nav a:hover {
 footer {
     background-color: #081b29;
     color: #fff;
-    text-align: center;
-    padding: 10px;
+    text-align: right;
+    padding: 15px;
 }
 
-/* Add media queries for responsiveness */
+.footer-text {
+    margin-right: 12%;
+}
+
+
 @media only screen and (max-width: 600px) {
     header, nav, .main-content, footer {
         padding: 10px;
@@ -181,14 +186,13 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh; /* Adjust the height as needed */
+    height: 60vh; 
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     text-align: center;
-    /*animation: colorTransition 7s linear infinite;*/
     border-radius: 8px;
     margin-top: 7%;
     margin-bottom: 3%;
@@ -196,22 +200,12 @@ footer {
     animation: borderAnimation 4s linear infinite;
 }
 
-/* Add your background image path @keyframes colorTransition {
-    0% {
-        opacity: 0.5;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0.5;
-    }    
-}*/
 
 
 
 
-/* Additional styling for the parallax content */
+
+
 .parallax-container h2 {
     font-size: 2.5em;
 }
@@ -230,7 +224,7 @@ footer {
     cursor: pointer;
     text-decoration: none;
     margin-left: 9.8%;
-    background-image: url('images/parallax3.jpg'); /* Add your background image path */
+    background-image: url('images/parallax3.jpg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -280,7 +274,7 @@ footer {
     cursor: pointer;
     text-decoration: none;
     margin-left: -100%;
-    background-image: url('images/parallax3.jpg'); /* Add your background image path */
+    background-image: url('images/parallax3.jpg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -348,4 +342,8 @@ footer {
 
 .hire-container {
     margin-top: -3.5%;
+}
+
+.icon {
+    width: 2%;
 }

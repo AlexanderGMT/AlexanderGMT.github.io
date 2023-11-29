@@ -9,7 +9,7 @@
 
 <body>
 
-
+    <!-- Navigation bar -->
     <nav>
         <ul>
             <li><a href="#Home">About</a></li>
@@ -19,20 +19,20 @@
         </ul>
     </nav>
 
-
+    <!-- The header with the text on the left part of the screen and the profile picture on the right-->
     <header class="header">
-        <section class="left">
+        <div class="left">
         <h1 class="text-right">Alexander Gomez</h1>
-            <h3 class="text-right">Front-end Developer</h3>
+            <h3 class="text-right">Front-end Developer / UI-UX Designer</h3>
                 <h4 class="text-right">INFJ-T</h4>
                     <p class="text-right">My name is Alexander Gomez. I enjoy developing my projects with JavaScript and
                         React. Currently studying a Bachelor's degree in Information and Communication Technology
                         at JAMK, University of Applied Sciences. Always striving to develop new skills,
                         in order to become a better programmer in the future.
-                        I invest most of my focus in Front-end Web Development and UI/UX Design. However, I also have
+                        I invest most of my focus in Front-end Web Development and UI/UX Design in figma. However, I also have
                         some experience with Backend.
                     </p>
-        </section>
+                </div>
         <div class="right">
                 <div class="image-container">
                     <img class="profile-pic" src="images/Captura de pantalla 2023-11-28 193306.jpg" alt="Alexander Gomez's Profile">
@@ -40,11 +40,13 @@
             </div>
     </header>
 
-
+    <!--Hire me! button right below the header, supporting it.-->
     <div class="hire-container">
         <a href="https://www.linkedin.com/in/alexander-gomez-tejeda/" target="_blank" class="btn-hire">Hire me!</a>
     </div>
-    <section class="main-content" id="Projects">
+
+    <!--The main content starts here, starting with the first parallax image container followed by the projects-->
+    <div class="main-content" id="Projects">
         <div class="parallax-container">
             <h2>Projects</h2>
         </div>
@@ -52,56 +54,57 @@
                 <a href="https://github.com/AlexanderGMT/nordic-athletica" target="_blank" class="btn">Repository</a>
             <P class="Porject-text">Front-end developer - WIMMA Foorumi</P>
                 <a href="https://www.youtube.com/watch?v=jeGk_33ieqg" target="_blank" class="btn">Repository</a>
-    </section>
+    </div>
 
 
-
-    <section class="main-content" id="Skills">
+    <!--Second parallax image container to support the skills-->
+    <div class="main-content" id="Skills">
         <div class="parallax-container">
             <h2>Skills</h2>
         </div>
-    </section>
+    </div>
 
+    <div>
+        <p></p>
+    </div>
 
-
-        <div class="skills-box"></div>
-            <div class="skill"></div>
+    <!--Skills bars with their respective level, can be managed just by adjusting the width % of each of them in the future.-->
+    <div class="skills-box"></div>
+        <div class="skill"></div>
                 
-                <div class="skill-name">JavaScript</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 40%;"></div>
-                </div>
-
-                <div class="skill-name">React</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 40%;"></div>
-                </div>
-
-                <div class="skill-name">MongoDB</div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 100%;"></div>
-            </div>
-
-            <div class="skill-name">MySQL</div>
+        <div class="skill-name">JavaScript</div>
             <div class="skill-bar">
-            <div class="skill-progress" style="width: 70%;"></div>
-        </div> 
-
-
-
-    <section class="main-content" id="About">
-        <div class="parallax-container">
-            <h2>Contact</h2>
+                <div class="skill-progress" style="width: 50%;"></div>
         </div>
-    </section>
+
+        <div class="skill-name">React</div>
+            <div class="skill-bar">
+                    <div class="skill-progress" style="width: 50%;"></div>
+        </div>
+
+        <div class="skill-name">MongoDB</div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%;"></div>
+        </div>
+
+        <div class="skill-name">MySQL</div>
+            <div class="skill-bar">
+        <div class="skill-progress" style="width: 70%;"></div>
+    </div> 
 
 
-
+    <!--Contact information in the footer-->
     <footer id="Contact">
-        <div>
+        <div class="footer-text">
             <p>Alexandergmt93@gmail.com</p>
-            <p>Linkedin</p>
-            <p>Github</p>
+            <a href="https://www.linkedin.com/in/alexander-gomez-tejeda/" target="_blank">
+                <img src="/images/LI-In-Bug.png" alt="Icon" class="icon">
+            </a>
+                <span>LinkedIn</span>
+            <a href="https://github.com/AlexanderGMT" target="_blank">
+                <img src="/images/github-mark-white.png" alt="Icon" class="icon">
+            </a>    
+            <span>Github</span>
         </div>
     </footer>
 </body>
