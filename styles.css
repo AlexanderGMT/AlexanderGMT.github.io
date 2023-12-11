@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap'); /* Imported Space Grotesk font for the whole portfolio */
 
 html {
     scroll-behavior: smooth;
@@ -12,7 +12,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: linear-gradient(to bottom right, #081b29, #63063f);
-    padding-top: 80px; /* Adjust as needed based on your navbar height */
+    padding-top: 80px; 
 }
 
 
@@ -33,7 +33,7 @@ scrollbar-thumb:hover {
     background-color: #62B6B7;
 }
 
-
+/* Header text and image */
 .header {
     background: transparent;
     color: #fff;
@@ -54,9 +54,10 @@ scrollbar-thumb:hover {
     margin-left: -100%;
 }
 
+/* SlideIn transition for the header text */
 @keyframes slideInT {
     to {
-        margin-left: 19%; /* Final position on the screen */
+        margin-left: 19%; 
     }
 }
 
@@ -87,6 +88,7 @@ header p {
     width: 45%;
 }
 
+/* Border animation */
 @keyframes borderAnimationP {
     0% {
         border-color: #fff;
@@ -105,7 +107,7 @@ header p {
     }
 }
 
-
+/* Navbar */
 nav {
     background: transparent;
     color: #fff;
@@ -181,11 +183,9 @@ footer {
 
 
 
-
-
-
+/* Parallax containers */
 .parallax-container {
-    background-image: url('images/parallax3.jpg'); /* Add your background image path */
+    background-image: url('images/parallax3.jpg'); 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -204,12 +204,6 @@ footer {
     animation: borderAnimation 4s linear infinite;
 }
 
-
-
-
-
-
-
 .parallax-container h2 {
     font-size: 2.5em;
 }
@@ -218,6 +212,8 @@ footer {
     font-size: 1.5em;
 }
 
+
+/* hire button */
 .btn {
     padding: 20px 60px;
     font-size: 16px;
@@ -236,7 +232,7 @@ footer {
     animation: slideInP 3s ease-out forwards, borderAnimation 4s linear infinite;
     margin-left: -100%;
 }
-
+/* Border color animations and slideIn transition for the button */
 @keyframes slideInP {
     to {
         margin-left: 9.8%; /* Final position on the screen */
@@ -260,7 +256,7 @@ footer {
         border-color: #fff;
     }
 }
-
+/* Hire button */
 .btn:hover {
     color: #62B6B7;
     border-color: #62B6B7;
@@ -306,6 +302,7 @@ footer {
     margin-left: 9.8%;
 }
 
+/* Skills display*/
 .skills-box {
     width: 20%;
 }
@@ -356,8 +353,6 @@ footer {
 
 
 /* Contact form */
-
-
 
 .container {
     display: flex;
