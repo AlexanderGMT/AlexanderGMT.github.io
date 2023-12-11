@@ -20,7 +20,7 @@
     </nav>
 
     <!-- The header with the text on the left part of the screen and the profile picture on the right-->
-    <header class="header">
+    <header class="header" id="Home">
         <div class="left">
         <h1 class="text-right">Alexander Gomez</h1>
             <h3 class="text-right">Front-end Developer / UI-UX Designer</h3>
@@ -39,21 +39,79 @@
             </div>
     </header>
 
-    <!--Hire me! button right below the header, supporting it.-->
+    <!-- Hire button-->
     <div class="hire-container">
         <a href="https://www.linkedin.com/in/alexander-gomez-tejeda/" target="_blank" class="btn-hire">Hire me!</a>
     </div>
 
-    <!--The main content starts here, starting with the first parallax image container followed by the projects-->
+
+    <!-- Projects slide + the JavaScript code to make it functional-->
     <div class="main-content" id="Projects">
         <div class="parallax-container">
-            <h2>Projects</h2>
-        </div>
-            <p class="Porject-text">MERN STACK project with JWT - Nordic Athletica</p>
-                <a href="https://github.com/AlexanderGMT/nordic-athletica" target="_blank" class="btn">Repository</a>
-            <P class="Porject-text">Front-end developer - WIMMA Foorumi</P>
-                <a href="https://www.youtube.com/watch?v=jeGk_33ieqg" target="_blank" class="btn">Repository</a>
+        <h2>Projects</h2>
     </div>
+    
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <a href="https://github.com/AlexanderGMT/nordic-athletica" target="_blank">
+            <div class="numbertext">1 / 2</div>
+                <img src="/images/Project1.jpg" style="width:100%">
+            <div class="text1">MERN STACK project with JWT - Nordic Athletica</div>
+        </a>
+    </div>
+
+    <div class="mySlides fade">
+        <a href="https://www.youtube.com/watch?v=jeGk_33ieqg" target="_blank">
+        <div class="numbertext">2 / 2</div>
+            <img src="/images/Project2.jpg" style="width:100%">
+        <div class="text2">Front-end developer - WIMMA Foorumi</div>
+        </a>
+    </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+</div>
+
+
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+
+
+
 
 
     <!--Second parallax image container to support the skills-->
@@ -61,10 +119,6 @@
         <div class="parallax-container">
             <h2>Skills</h2>
         </div>
-    </div>
-
-    <div>
-        <p></p>
     </div>
 
     <!--Skills bars with their respective level, can be managed just by adjusting the width % of each of them in the future.-->
@@ -97,8 +151,27 @@
         <div class="skill-progress" style="width: 70%;"></div>
     </div> 
 
+    <!-- Contact parallax-->
+    <div class="main-content" id="Contact">
+        <div class="parallax-container">
+            <h2>Contact</h2>
+        </div>
+    </div>
+    <!-- Contact form container (Not fuctional because I need the server side with XAMPP or Apache. Or I will eventually modify it to make it functional with
+        node.js and mongodb.)-->
+    <div class="container">
+        <form action="action_page.php" method="post">
+            <input type="text" id="fname" name="firstname" placeholder="Your name...">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+            <textarea id="subject" name="subject" placeholder="Message..." style="height:200px"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 
-    <!--Contact information in the footer-->
+
+
+
+    <!-- Footer-->
     <footer id="Contact">
         <div class="footer-text">
             <p>Alexandergmt93@gmail.com</p>
@@ -113,4 +186,5 @@
         </div>
     </footer>
 </body>
+
 </html>

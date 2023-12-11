@@ -12,6 +12,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: linear-gradient(to bottom right, #081b29, #63063f);
+    padding-top: 80px; /* Adjust as needed based on your navbar height */
 }
 
 
@@ -80,7 +81,7 @@ header p {
     height: auto; 
     margin-right: 24%;
     border-radius: 8px;
-    opacity: 0.7;
+    opacity: 0.9;
     border: 2px solid;
     animation: borderAnimation 4s linear infinite;
     width: 45%;
@@ -109,7 +110,12 @@ nav {
     background: transparent;
     color: #fff;
     text-align: center;
-    padding: 50px;
+    padding: 20px; /* Reduce padding for a more compact header */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000; 
 }
 
 nav ul {
@@ -117,8 +123,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: right;
-    margin-right: 10%;
+    justify-content: flex-end; /* Align items to the right */
 }
 
 nav li {
@@ -131,7 +136,6 @@ nav a {
     font-weight: bold;
     font-size: 18px;
     transition: opacity 0.5s ease-in-out;
-    
 }
 
 nav a:hover {
@@ -186,7 +190,7 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 40vh; 
+    height: 30vh; 
     position: relative;
     display: flex;
     align-items: center;
@@ -347,3 +351,158 @@ footer {
 .icon {
     width: 2%;
 }
+
+
+
+
+/* Contact form */
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid white;
+    animation: borderAnimation 4s linear infinite;
+    border-radius: 4px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+input[type="submit"] {
+    padding: 16px 30px;
+    margin-top: 1%;
+    margin-bottom: 8%;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    background-image: url('images/parallax3.jpg'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: borderAnimation 4s linear infinite;
+}
+
+
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 60%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 2%;
+    margin-top: 10%;
+    border: 1px solid;
+    border-radius: 4px;
+    animation: borderAnimation 4s linear infinite;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    padding: 16px;
+    color: #045F66;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.text1 {
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.text2 {
+    color: black;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.numbertext {
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #045F66;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #045F66;
+}
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+
+
+
+
+
+
+
