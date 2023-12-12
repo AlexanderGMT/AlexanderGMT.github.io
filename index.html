@@ -19,6 +19,7 @@
         </ul>
     </nav>
 
+
     <!-- The header with the text on the left part of the screen and the profile picture on the right-->
     <header class="header" id="Home">
         <div class="left">
@@ -39,77 +40,35 @@
             </div>
     </header>
 
+
     <!-- Hire button-->
     <div class="hire-container">
         <a href="https://www.linkedin.com/in/alexander-gomez-tejeda/" target="_blank" class="btn-hire">Hire me!</a>
     </div>
 
 
-    <!-- Projects slide + the JavaScript code to make it functional-->
+
+    <!-- Projects display-->
+
     <div class="main-content" id="Projects">
         <div class="parallax-container">
-        <h2>Projects</h2>
+            <h2>Projects</h2>
+        </div>
     </div>
+
+
+
+    <div id="container">
+        <div class="portfolio-item">
+            <img src="images/Project1.jpg" alt="Image 1">
+            <a href="https://github.com/AlexanderGMT/nordic-athletica" target="_blank">Nordic Athletica - MERN STACK project with JWT</a>
+        </div>
     
-<div class="slideshow-container">
-    <div class="mySlides fade">
-        <a href="https://github.com/AlexanderGMT/nordic-athletica" target="_blank">
-            <div class="numbertext">1 / 2</div>
-                <img src="/images/Project1.jpg" alt="Project 1" style="width:100%">
-            <div class="text1">MERN STACK project with JWT - Nordic Athletica</div>
-        </a>
+        <div class="portfolio-item">
+            <img src="images/Project2.jpg" alt="Image 2">
+            <a href="https://www.youtube.com/watch?v=jeGk_33ieqg" target="_blank">WIMMA Foorumi - Front-End developer</a>
+        </div>
     </div>
-
-    <div class="mySlides fade">
-        <a href="https://www.youtube.com/watch?v=jeGk_33ieqg" target="_blank">
-        <div class="numbertext">2 / 2</div>
-            <img src="/images/Project2.jpg" alt="Project 2" style="width:100%">
-        <div class="text2">Front-end developer - WIMMA Foorumi</div>
-        </a>
-    </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-    </div>
-</div>
-
-
-    <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-    }
-    </script>
-
-
-
 
 
 
@@ -120,6 +79,9 @@
             <h2>Skills</h2>
         </div>
     </div>
+
+
+
 
     <!--Skills bars with their respective level, can be managed just by adjusting the width % of each of them in the future.-->
     <div class="skills-box"></div>
@@ -152,12 +114,16 @@
     </div> 
 
 
+
     <!-- Contact parallax-->
     <div class="main-content" id="Contact">
         <div class="parallax-container">
             <h2>Contact</h2>
         </div>
     </div>
+
+
+
     <!-- Contact form container (Not fuctional because I need the server side with XAMPP or Apache, even if the code is done. Or I will eventually modify it to make it functional with
         node.js and mongodb.)-->
     <div class="container">
@@ -177,11 +143,11 @@
         <div class="footer-text">
             <p>Alexandergmt93@gmail.com</p>
             <a href="https://www.linkedin.com/in/alexander-gomez-tejeda/" target="_blank">
-                <img src="/images/LI-In-Bug.png" alt="Icon" class="icon">
+                <img src="images/LI-In-Bug.png" alt="Icon" class="icon">
             </a>
                 <span>LinkedIn</span>
             <a href="https://github.com/AlexanderGMT" target="_blank">
-                <img src="/images/github-mark-white.png" alt="Icon" class="icon">
+                <img src="images/github-mark-white.png" alt="Icon" class="icon">
             </a>
             <span>Github</span>
         </div>
